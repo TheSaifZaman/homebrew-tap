@@ -1,6 +1,6 @@
 cask "heads-up" do
   version "3.0"
-  sha256 "890b62dabe8a526dda3335e07f91955c3fb1ad8aa43deba90b199215e646d1dc"
+  sha256 "bb30960fd10e558b0a7e6835304925d46814d858913fa4fe2364b3c68ad28638"
 
   url "https://github.com/TheSaifZaman/headsup/releases/download/v#{version}/HeadsUp-#{version}.zip"
   name "Heads Up"
