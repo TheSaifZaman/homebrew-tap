@@ -1,6 +1,6 @@
 cask "heads-up" do
   version "2.1"
-  sha256 "d8c8a4d611b83771cb6e407f22d6ae8e5d35f9582b2d0a1651cca500a4d81697"
+  sha256 "3d98b4054e372ce98b72602d5b50ca60007bba54f75a4a1a734e9d1e135ebb2a"
 
   url "https://github.com/TheSaifZaman/headsup/releases/download/v#{version}/HeadsUp-#{version}.zip"
   name "Heads Up"
@@ -13,9 +13,9 @@ cask "heads-up" do
   app "Heads Up.app"
 
   caveats <<~EOS
-    Heads Up is not notarized by Apple. If macOS blocks the first launch,
-    right-click the app in /Applications and choose "Open", or reinstall with:
-      brew reinstall --cask heads-up --no-quarantine
+    Heads Up is not notarized by Apple. To let macOS accept it so it opens
+    automatically, run:
+      xattr -dr com.apple.quarantine "/Applications/Heads Up.app"
   EOS
 
   zap trash: [

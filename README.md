@@ -3,11 +3,12 @@
 ```sh
 brew tap TheSaifZaman/tap
 brew trust TheSaifZaman/tap
-brew install --cask heads-up --no-quarantine
+brew install --cask heads-up
+xattr -dr com.apple.quarantine "/Applications/Heads Up.app"
 ```
 
-(`--no-quarantine` skips the Gatekeeper warning — the app is ad-hoc signed,
-not notarized. Without it, right-click → Open on first launch.)
+The `xattr` command tells macOS to accept the app (ad-hoc signed, not
+notarized) so it opens automatically.
 
 | Cask | Description |
 |---|---|
